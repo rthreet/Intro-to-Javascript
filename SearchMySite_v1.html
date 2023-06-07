@@ -6,11 +6,16 @@
     var site = "wikipedia.org";
     var lookfor = document.getElementById("txtlookfor").value; 
     if(lookfor.length>0) {
+        var ddchoice = document.getElementById("dropdown").value
+        if (ddchoice == 2) {
             var query="http://www.google.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;
-            location.href=query;  
+        } else {
+            var query = "http://www.bing.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;            
         }
-            else {
-                alert("Please type the word or phrase that you would like to search for.");
+        location.href=query;  
+        }
+        else {
+            alert("Please type the word or phrase that you would like to search for.");
         }
     }    
     </script>
@@ -22,8 +27,7 @@
                &nbsp;Choose engine: 
                <select id="dropdown">
                <option value="1">Bing</option> 
-               <option value="2">Google</option>
-               
+               <option value="2" selected>Google</option>
                </select>          
         <input type="button" onclick="search()" value="Go">
     </p>
