@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search My Site</title>
+    <script>function search(){
+    var site = "wikipedia.org";
+    var lookfor = document.getElementById("txtlookfor").value; 
+    if(lookfor.length>0) {
+            var query="http://www.google.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;
+            location.href=query;  
+        }
+            else {
+                alert("Please type the word or phrase that you would like to search for.");
+        }
+    }    
+    </script>
+ </head>
+<body>
+    <p>Search this site:
+        <input type="text" id="txtlookfor" autofocus>
+               <!-- Show drop-down list -->
+               &nbsp;Choose engine: 
+               <select id="dropdown">
+               <option value="1">Bing</option> 
+               <option value="2">Google</option>
+               
+               </select>          
+        <input type="button" onclick="search()" value="Go">
+    </p>
+</body>
+</html>
