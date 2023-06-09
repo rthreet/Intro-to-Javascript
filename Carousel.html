@@ -3,6 +3,9 @@
 <head>
  <title>Carousel</title>
  <script>
+    var maximages = 11;
+    var startpath = "birds/birds"
+    var extension = ".png"
     //Show clicked image in the large img tag
     function showbig(pic) {
         document.getElementById("bigpic").src = pic;
@@ -26,6 +29,7 @@
  <div class="carousel">
   <img src=" birds/birds01.png" alt="" id="bigpic">
   <div class="thumbs">
+   <img src="icons/LeftArrow.png" alt="Previous" onclick="calcslide(-1)" >
    <img src="birds/birds01.png" alt="" onclick="showbig(this.src)">
    <img src="birds/birds02.png" alt="" onclick="showbig(this.src)">
    <img src="birds/birds03.png" alt="" onclick="showbig(this.src)">
@@ -37,6 +41,7 @@
    <img src="birds/birds09.png" alt="" onclick="showbig(this.src)">
    <img src="birds/birds10.png" alt="" onclick="showbig(this.src)">
    <img src="birds/birds11.png" alt="" onclick="showbig(this.src)">
+   <img src="icons/RightArrow.png" alt="Next" onclick="calcslide(1)">
   </div><!-- End thumbs -->
  </div><!-- End carousel -->
 </body>
