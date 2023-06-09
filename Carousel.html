@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Carousel</title>
+ <script>
+    function showbig(pic) {
+        alert(pic);
+    }
+ </script>
+ <style>
+  /* CSS code to style the pictures */
+  .carousel {
+   text-align: center;
+  }
+  #bigpic {
+   height: 400px;
+  }
+  .thumbs img {
+   height: 75px;
+  }
+ </style>
+</head>
+<body>
+ <!-- HTML to display the pictures -->
+ <div class="carousel">
+  <img src=" birds/birds01.png" alt="" id="bigpic">
+  <div class="thumbs">
+   <img src="birds/birds01.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds02.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds03.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds04.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds05.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds06.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds07.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds08.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds09.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds10.png" alt="" onclick="showbig(this.src)">
+   <img src="birds/birds11.png" alt="" onclick="showbig(this.src)">
+  </div><!-- End thumbs -->
+ </div><!-- End carousel -->
+</body>
+</html>
