@@ -42,6 +42,34 @@
         }
     </style>
     <script>
+     //Global variable counter to keep track of current picture
+    var imgnumber = 0;
+    //Name of the folder that contains the pictures
+    var picfolder = "slideshow";
+    //Array of picture file names (can be any length)
+    var picfiles = ["candle.jpg", "chip.jpg", "fire.png", "paint.png", "water.png"];
+    //Declare an empty array of image objects
+    var images = [];
+    // Populate each image object with a picture from a file
+    for (var i = 0; i < picfiles.length; i++) {
+    images[i] = new Image();
+    images[i].src = picfolder + "/" + picfiles[i];
+    }
+    // Number of images in array
+    var imgcount = images.length;
+    function slide(num) {
+    // Increment or decrement in range 1 to imgcount
+    imgnumber = (imgnumber + num) % imgcount;
+    // If number reaches zero, loop around to imgcount
+    imgnumber = imgnumber < 0 ? imgcount-1 : imgnumber;
+    // Set the image source to the source of the array image
+    document.getElementById("target").src = images[imgnumber].src;
+    }
+    //Wait until the page is fully loaded before setting source of the image
+    window.addEventListener('load', (event) => {
+    // Start by showing the first image in the array
+    document.getElementById("target").src = images[0].src;
+    })
     </script>
 </head>
 
