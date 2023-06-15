@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Responsive Auto Photo Slider</title>
+    <!-- Common tag for helping page fit phone screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Window through which the photos slide */
+        #window {
+            width: 60vw;
+            /* 56.25% is for 16:9 ratio. */
+            padding-top: calc(.5625 * 60vw);
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 3px;
+            box-shadow: 2px 2px 2px silver;
+        }
+
+        /* Each image in the show */
+        #window img {
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 60vw;
+            width: 60vw;
+            animation-iteration-count: 1;
+        }
+
+        /* Slide current image off to the left out of view */
+        #window img.slideout {
+            left: -60vw;
+            transition-duration: 1s;
+            animation-iteration-count: 1;
+        }
+
+        /* Slide next image into view */
+        #window img.slidein {
+            left: 0;
+            transition-duration: 1s;
+            animation-iteration-count: 1;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div id="window">
+        <!-- Start wtith the first image already in here set to class='slidein' -->
+        <img src="people/image01.jpg" class="slidein">
+    </div>
+</body>
+
+</html>
