@@ -10,9 +10,8 @@
             $('.accordion .term').click(function () {
                 //Hide all dropdown panels
                 if ($(this).next('p').is(':hidden')) {
+                    $('.accordion p').slideUp('fast');
                 }
-                $('.accordion p').slideUp('fast');
-
                 //Toggle the paragraph below the term that was clicked
                 $(this).next('p').slideToggle('fast');
             });
