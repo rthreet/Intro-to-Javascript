@@ -2,17 +2,20 @@
 <html>
 <head>
     <title>toggleBackground</title>
+	<!-- jQuery CDN from code.jquery.com -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">     
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+        </script>
+	<script>
+      $(document).ready(function () {
+        // jQuery code to execute after page load
+		$('button').click(function () {
+		$('body').toggleClass('reverse');
+		});
+
+      });
     </script>
-<script>
-  $(document).ready(function () {
-   // jQuery code to execute after page load
-   $('button').click(function(){
-        $('body').toggleClass('reverse');
-    });
-  });
-</script>
+	
     <style>
         .reverse {
             background: black;
@@ -21,7 +24,6 @@
     </style>
 </head>
 <body>
-    
     <button>Reverse It</button>
     <p style="font-size: 300%">This is just some sample text.</p>
 </body>
