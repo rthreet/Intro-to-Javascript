@@ -9,6 +9,13 @@
     <script>
         //jQuery code.
         $(document).ready(function () {
+            //User clicked top of a collapsible panel
+            $('.cPanel .top').click(function () {
+                //Switch between the two background images
+                $(this).toggleClass('collapse expand');
+                //Slide the panel up or down
+                $(this).next('.slidepanel').slideToggle('slow');
+            });
         });
     </script>
     <style>
